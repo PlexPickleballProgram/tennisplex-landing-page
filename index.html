@@ -44,21 +44,18 @@
 
     <div class="container mx-auto p-4 md:p-8 max-w-4xl flex flex-col">
 
-        <header class="text-center mb-8">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-primary-blue mb-3">
-                <span class="text-energetic-yellow">MEET OUR TEAM!</span>
-                <br>
-                Coaches & Junior Camps at The Montgomery Tennisplex
+        <header class="text-center mb-8 bg-white p-6 rounded-lg shadow-custom">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-primary-blue mb-2">
+                MEET OUR COACHES & CAMPS
             </h1>
             <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
-                Explore our expert coaching staff and exciting junior camp opportunities.
+                Your Path to Pickleball Excellence Starts Here!
             </p>
         </header>
 
         <nav class="mb-8 bg-white rounded-lg shadow-custom p-2">
             <div class="flex flex-wrap justify-center gap-2">
                 <button class="tab-button active bg-primary-blue text-white py-2 px-4 rounded-md hover:bg-primary-blue/90 transition-colors" data-tab="coach-houston">Coach Houston</button>
-                <button class="tab-button bg-accent-blue text-white py-2 px-4 rounded-md hover:bg-accent-blue/90 transition-colors" data-tab="coach-barry">Coach Barry</button>
                 <button class="tab-button bg-accent-blue text-white py-2 px-4 rounded-md hover:bg-accent-blue/90 transition-colors" data-tab="coach-art">Coach Art</button>
                 <button class="tab-button bg-accent-blue text-white py-2 px-4 rounded-md hover:bg-accent-blue/90 transition-colors" data-tab="junior-camps">Junior Camps</button>
             </div>
@@ -67,15 +64,38 @@
         <main class="flex-grow">
             <!-- Coach Houston Section -->
             <section id="coach-houston" class="tab-content active bg-white rounded-lg shadow-custom p-6 md:p-8 mb-8">
+                <img src="coach_houston.jpg" alt="Coach Houston" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
                 <h2 class="text-3xl font-bold text-primary-blue mb-4 text-center">Coach Houston: High-Performance & Strategy</h2>
                 <div class="p-4 bg-neutral-light rounded-lg border border-gray-200 text-center mb-6">
-                    <p class="text-gray-700 text-lg mb-2">Coach Houston specializes in elevating competitive play, focusing on advanced strategies, shot selection, and mental toughness.</p>
-                    <p class="text-gray-600 text-sm">He works with players aiming for high-level competition and strategic mastery. Coach Houston brings years of experience to help you refine your game.</p>
+                    <p class="text-gray-700 text-lg mb-2">Houston is a passionate and skillful coach who specializes in technical and mental approaches that reduce injury and maximize player potential. He brings curious and learning-oriented players to the next level and beyond quickly.</p>
+                    <p class="text-gray-600 text-sm mt-2">A high-level tennis coach for 12 years, Houston ran the adult program for a 30-court tennis facility and created a program that teaches tennis as a somatic discipline. His DUPR is 5.1, and he regularly holds his own against 6.0 players.</p>
                 </div>
-                <p class="text-center text-gray-600 mt-6 mb-8">Perfect for players looking to refine their game and dominate the court.</p>
-                <div class="border-t border-gray-200 pt-6">
+                
+                <h3 class="text-2xl font-bold text-primary-blue mb-3 text-center">High-Level Pickleball Clinic: Weekend Workshop</h3>
+                <p class="text-gray-700 text-center mb-4 max-w-2xl mx-auto">This structured clinic is designed for competitive and advanced players (3.5+ DUPR), focusing on refining techniques, strategic play, and match performance through intensive training.</p>
+
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 mb-6 text-center">
+                    <h4 class="font-bold text-lg text-primary-blue mb-2">Workshop Details:</h4>
+                    <ul class="list-disc list-inside text-gray-700 text-sm space-y-1 inline-block text-left">
+                        <li>**Duration:** Weekend Workshop (6 hours total)</li>
+                        <li>**Session Length:** 3 hours per day (e.g., 90 min before lunch, 90 min after)</li>
+                        <li>**Participants:** 6-16 players (4 per court)</li>
+                        <li>**Skill Level:** Advanced-Intermediate/Advanced/Competitive (3.5+ DUPR)</li>
+                    </ul>
+                </div>
+
+                <h4 class="font-bold text-lg text-primary-blue mb-2 text-center">Key Focus Areas:</h4>
+                <ul class="list-disc list-inside text-gray-700 text-sm space-y-1 mb-8 max-w-xl mx-auto">
+                    <li>Advanced Strategy & Patterns (Building Points, Dinks, Drops, Resets, Court Coverage)</li>
+                    <li>Movement & Power Control (Speedups, Smashes, Blocks & Counters)</li>
+                    <li>Spin Play (Topspin/Slice Defense, Transition Skills)</li>
+                    <li>Match Play & Tournament Strategy (Positioning, Mental Game)</li>
+                </ul>
+                <p class="text-center text-gray-600 mt-6 mb-8">Ongoing a la carte skills from Coach Houston are available at The Plex.</p>
+
+                <div class="border-t border-gray-200 pt-6 mt-8">
                     <h3 class="text-2xl font-bold text-primary-blue mb-4 text-center">Express Your Interest!</h3>
-                    <form class="interest-form max-w-md mx-auto space-y-4" data-interest-id="Coach Houston Consult">
+                    <form class="interest-form max-w-md mx-auto space-y-4" data-interest-id="Coach Houston High-Level Clinic">
                         <div>
                             <label for="name-houston" class="block text-gray-700 text-sm font-bold mb-2">Your Name:</label>
                             <input type="text" id="name-houston" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
@@ -87,44 +107,10 @@
                         <div class="pt-2">
                             <p class="block text-gray-700 text-sm font-bold mb-2">I'm interested in:</p>
                             <label class="inline-flex items-center">
-                                <input type="checkbox" name="interest" value="Coach Houston Consult" class="form-checkbox h-5 w-5 text-accent-green" checked disabled>
-                                <span class="ml-2 text-gray-700">Coach Houston Consult</span>
+                                <input type="checkbox" name="interest" value="Coach Houston High-Level Clinic" class="form-checkbox h-5 w-5 text-accent-green" checked>
+                                <span class="ml-2 text-gray-700">Coach Houston High-Level Clinic</span>
                             </label>
-                            <!-- Other general interests can be added here if desired -->
-                        </div>
-                        <button type="submit" class="w-full bg-accent-green hover:bg-accent-green/90 text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline transition-colors">
-                            Submit My Interest
-                        </button>
-                        <div class="form-message text-center mt-4 text-sm font-semibold"></div>
-                    </form>
-                </div>
-            </section>
-
-            <!-- Coach Barry Section -->
-            <section id="coach-barry" class="tab-content bg-white rounded-lg shadow-custom p-6 md:p-8 mb-8">
-                <h2 class="text-3xl font-bold text-primary-blue mb-4 text-center">Coach Barry: Youth Development & Our Junior Star!</h2>
-                <div class="p-4 bg-neutral-light rounded-lg border border-gray-200 text-center mb-6">
-                    <p class="text-gray-700 text-lg mb-2">Coach Barry brings energy and excitement to the court, specializing in youth pickleball development.</p>
-                    <p class="text-gray-600 text-sm">He is the dedicated coach of our 10-year-old paddle-sponsored prodigy, [10-Year-Old's Name]! Coach Barry focuses on building strong fundamentals, fostering a love for the game, and creating a positive learning environment for young players.</p>
-                </div>
-                <p class="text-center text-gray-600 mt-6 mb-8">Ideal for kids and teens eager to learn pickleball in a dynamic and engaging setting.</p>
-                <div class="border-t border-gray-200 pt-6">
-                    <h3 class="text-2xl font-bold text-primary-blue mb-4 text-center">Express Your Interest!</h3>
-                    <form class="interest-form max-w-md mx-auto space-y-4" data-interest-id="Coach Barry (Youth)">
-                        <div>
-                            <label for="name-barry" class="block text-gray-700 text-sm font-bold mb-2">Your Name:</label>
-                            <input type="text" id="name-barry" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
-                        </div>
-                        <div>
-                            <label for="email-barry" class="block text-gray-700 text-sm font-bold mb-2">Your Email:</label>
-                            <input type="email" id="email-barry" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
-                        </div>
-                        <div class="pt-2">
-                            <p class="block text-gray-700 text-sm font-bold mb-2">I'm interested in:</p>
-                            <label class="inline-flex items-center">
-                                <input type="checkbox" name="interest" value="Coach Barry (Youth)" class="form-checkbox h-5 w-5 text-accent-green" checked disabled>
-                                <span class="ml-2 text-gray-700">Coach Barry (Youth)</span>
-                            </label>
+                            <input type="hidden" name="primaryInterest" value="Coach Houston High-Level Clinic">
                         </div>
                         <button type="submit" class="w-full bg-accent-green hover:bg-accent-green/90 text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline transition-colors">
                             Submit My Interest
@@ -136,12 +122,16 @@
 
             <!-- Coach Art Section -->
             <section id="coach-art" class="tab-content bg-white rounded-lg shadow-custom p-6 md:p-8 mb-8">
-                <h2 class="text-3xl font-bold text-primary-blue mb-4 text-center">Coach Art: Beginner Foundations & Accessibility</h2>
+                <img src="coach_art.png" alt="Coach Art" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                <h2 class="text-3xl font-bold text-primary-blue mb-4 text-center">Meet Art Shenk: Pickleball Coach & Ambassador</h2>
                 <div class="p-4 bg-neutral-light rounded-lg border border-gray-200 text-center mb-6">
-                    <p class="text-gray-700 text-lg mb-2">Coach Art excels at introducing new players to pickleball, making the learning process simple, fun, and confidence-building.</p>
-                    <p class="text-gray-600 text-sm">He focuses on core mechanics, basic rules, and getting you comfortable on the court quickly, no matter your athletic background.</p>
+                    <p class="text-gray-700 text-lg mb-2">Art is a highly experienced pickleball coach dedicated to growing the sport in our community.</p>
+                    <ul class="list-disc list-inside text-gray-600 text-sm mt-2 space-y-1 mx-auto max-w-md">
+                        <li>Professional Pickleball Registry (PPR) Certified Coach/Instructor</li>
+                        <li>USAPA Montgomery County Pickleball Ambassador</li>
+                    </ul>
                 </div>
-                <p class="text-center text-gray-600 mt-6 mb-8">Your perfect starting point for discovering the joy of pickleball!</p>
+                <p class="text-center text-gray-600 mt-6 mb-8">Coach Art excels at introducing new players to pickleball, making the learning process simple, fun, and confidence-building. Your perfect starting point for discovering the joy of pickleball!</p>
                 <div class="border-t border-gray-200 pt-6">
                     <h3 class="text-2xl font-bold text-primary-blue mb-4 text-center">Express Your Interest!</h3>
                     <form class="interest-form max-w-md mx-auto space-y-4" data-interest-id="Coach Art (Beginner)">
@@ -156,9 +146,10 @@
                         <div class="pt-2">
                             <p class="block text-gray-700 text-sm font-bold mb-2">I'm interested in:</p>
                             <label class="inline-flex items-center">
-                                <input type="checkbox" name="interest" value="Coach Art (Beginner)" class="form-checkbox h-5 w-5 text-accent-green" checked disabled>
+                                <input type="checkbox" name="interest" value="Coach Art (Beginner)" class="form-checkbox h-5 w-5 text-accent-green" checked>
                                 <span class="ml-2 text-gray-700">Coach Art (Beginner)</span>
                             </label>
+                            <input type="hidden" name="primaryInterest" value="Coach Art (Beginner)">
                         </div>
                         <button type="submit" class="w-full bg-accent-green hover:bg-accent-green/90 text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline transition-colors">
                             Submit My Interest
@@ -170,15 +161,17 @@
 
             <!-- Junior Camps Section -->
             <section id="junior-camps" class="tab-content bg-white rounded-lg shadow-custom p-6 md:p-8 mb-8">
+                <img src="aidan.jpg" alt="Aidan" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
                 <h2 class="text-3xl font-bold text-primary-blue mb-4 text-center">Junior Pickleball Camps!</h2>
-                <p class="text-gray-700 text-center mb-6 max-w-2xl mx-auto">
-                    Give your child the gift of pickleball this summer! Our camps offer fun, engaging instruction for all skill levels, focusing on skill development, sportsmanship, and making new friends.
-                </p>
-                <div class="bg-accent-green/10 rounded-lg p-5 text-center border border-accent-green mb-8">
-                    <h3 class="text-2xl font-bold text-accent-green mb-3">Exclusive Early Bird Deals!</h3>
-                    <p class="text-gray-700 text-lg mb-4">Sign up for our Summer Camps at Family Night and unlock special **pre-event rates** and **limited-time savings**!</p>
-                    <p class="text-gray-600 text-sm">Don't miss this chance to secure your child's spot at the best rates!</p>
+                <div class="p-4 bg-neutral-light rounded-lg border border-gray-200 text-center mb-6">
+                    <p class="text-gray-700 text-lg mb-2">Give your child the gift of pickleball this summer! Our camps offer fun, engaging instruction for all skill levels, focusing on skill development, sportsmanship, and making new friends.</p>
+                    <p class="text-gray-600 text-sm mt-2">Our dedicated youth coach, Coach Barry, leads our junior programs. He works with talented young players like Aidan, our 10-year-old paddle-sponsored prodigy.</p>
+                    <p class="text-gray-600 text-sm mt-2">**Aidan's Bio:** Aidan started playing tennis at age 5, then picked up pickleball in June 2020. He became more interested at age 8 and now plays tennis and pickleball equally. In 2024, he played 5 junior PPA events, earning 3 medals in boys doubles and was the only 9-year-old to medal in boys singles. So far in 2025, he’s played 2 junior events, earning gold in boys singles and silver in boys doubles and mixed doubles.</p>
                 </div>
+                
+                <h3 class="text-2xl font-bold text-primary-blue mb-3 text-center">Interested in Junior Camps?</h3>
+                <p class="text-gray-700 text-center mb-4 max-w-2xl mx-auto">Fill out the form below to express your interest! Those who register their interest will receive a special rate when camp sign-ups officially open.</p>
+
                 <div class="border-t border-gray-200 pt-6">
                     <h3 class="text-2xl font-bold text-primary-blue mb-4 text-center">Express Your Interest!</h3>
                     <form class="interest-form max-w-md mx-auto space-y-4" data-interest-id="Junior Camps">
@@ -193,9 +186,10 @@
                         <div class="pt-2">
                             <p class="block text-gray-700 text-sm font-bold mb-2">I'm interested in:</p>
                             <label class="inline-flex items-center">
-                                <input type="checkbox" name="interest" value="Junior Camps" class="form-checkbox h-5 w-5 text-accent-green" checked disabled>
+                                <input type="checkbox" name="interest" value="Junior Camps" class="form-checkbox h-5 w-5 text-accent-green" checked>
                                 <span class="ml-2 text-gray-700">Junior Camps</span>
                             </label>
+                            <input type="hidden" name="primaryInterest" value="Junior Camps">
                         </div>
                         <button type="submit" class="w-full bg-accent-green hover:bg-accent-green/90 text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline transition-colors">
                             Submit My Interest
@@ -209,7 +203,7 @@
 
         <footer class="text-center mt-12 pt-8 text-gray-500 text-sm">
             <p>&copy; 2025 The Montgomery Tennisplex. All rights reserved.</p>
-            <p>18010 Darnstown Rd, Gaithersburg, MD 20878</p>
+            <p>11710 Darnstown Rd, Gaithersburg, MD 20878</p>
         </footer>
 
     </div>
@@ -260,44 +254,50 @@
                     const formMessage = this.querySelector('.form-message');
                     const nameInput = this.querySelector('input[name="name"]');
                     const emailInput = this.querySelector('input[name="email"]');
-                    const interestsChecked = Array.from(this.querySelectorAll('input[name="interest"]:checked')).map(cb => cb.value);
+                    
+                    // Get primary interest from hidden input or checked checkbox
+                    let interestsToSend = [];
+                    const primaryInterestHidden = this.querySelector('input[name="primaryInterest"]');
+                    if (primaryInterestHidden && primaryInterestHidden.value) {
+                        interestsToSend.push(primaryInterestHidden.value);
+                    } else {
+                        // Fallback to checkbox if hidden input not found (shouldn't happen with current setup)
+                        const interestsChecked = Array.from(this.querySelectorAll('input[name="interest"]:checked')).map(cb => cb.value);
+                        interestsToSend.push(...interestsChecked);
+                    }
 
                     const name = nameInput.value;
                     const email = emailInput.value;
 
-                    if (name && email && interestsChecked.length > 0) {
-                        // In a real scenario, you would send this data to a server-side script
-                        // (e.g., Google Sheets via Apps Script, a CRM, or a database).
-                        // For this static HTML page, we'll just simulate success.
+                    if (name && email && interestsToSend.length > 0) {
+                        const webAppUrl = 'https://script.google.com/macros/s/AKfycbxGVF5bxJsAH5HzshCsw3XN71_7lSNfxK39eG7QV9QqgWO-9FBPIaOv8DbOzoTdi2U0pQ/exec'; // Your Web App URL
 
-                        const webAppUrl = 'https://script.google.com/macros/s/AKfycbxGVF5bxJsAH5HzshCsw3XN71_7lSNfxK39eG7QV9QqgWO-9FBPIaOv8DbOzoTdi2U0pQ/exec'; // PASTE YOUR WEB APP URL HERE
+                        const formData = new FormData();
+                        formData.append('name', name);
+                        formData.append('email', email);
+                        formData.append('interests', interestsToSend.join(', ')); // Send interests as a comma-separated string
 
-const formData = new FormData();
-formData.append('name', name);
-formData.append('email', email);
-formData.append('interests', interestsChecked.join(', ')); // Send interests as a comma-separated string
-
-fetch(webAppUrl, {
-    method: 'POST',
-    body: formData
-})
-.then(response => response.json())
-.then(data => {
-    if (data.result === 'success') {
-        formMessage.textContent = 'Thank you for your interest! We will be in touch soon.';
-        formMessage.style.color = '#32CD32'; // Green color for success
-        this.reset(); // Clear the form
-    } else {
-        formMessage.textContent = 'Submission failed. Please try again or contact us directly.';
-        formMessage.style.color = '#FF6B6B'; // Red color for error
-        console.error('Form submission error:', data.message);
-    }
-})
-.catch(error => {
-    formMessage.textContent = 'An error occurred. Please try again or contact us directly.';
-    formMessage.style.color = '#FF6B6B'; // Red color for error
-    console.error('Network or fetch error:', error);
-});
+                        fetch(webAppUrl, {
+                            method: 'POST',
+                            body: formData
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.result === 'success') {
+                                formMessage.textContent = 'Thank you for your interest! We will be in touch soon.';
+                                formMessage.style.color = '#32CD32'; // Green color for success
+                                this.reset(); // Clear the form
+                            } else {
+                                formMessage.textContent = 'Submission failed. Please try again or contact us directly.';
+                                formMessage.style.color = '#FF6B6B'; // Red color for error
+                                console.error('Form submission error:', data.message);
+                            }
+                        })
+                        .catch(error => {
+                            formMessage.textContent = 'An error occurred. Please try again or contact us directly.';
+                            formMessage.style.color = '#FF6B6B'; // Red color for error
+                            console.error('Network or fetch error:', error);
+                        });
                     } else {
                         formMessage.textContent = 'Please fill out your Name, Email, and select at least one interest.';
                         formMessage.style.color = '#FF6B6B'; // Red color for error
@@ -308,6 +308,13 @@ fetch(webAppUrl, {
             // Initial tab display based on URL hash or default to first tab
             const initialTabFromHash = window.location.hash ? window.location.hash.substring(1) : 'coach-houston';
             showTab(initialTabFromHash);
+
+            // If a hash is present on load, scroll to the top of the page content, not the specific section
+            if (window.location.hash) {
+                setTimeout(() => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }, 100);
+            }
         });
     </script>
 </body>
