@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Montgomery Tennisplex: Meet Our Coaches & Camps</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0F0F0; /* Light Gray Background */
+            min-height: 100vh; /* Ensure full viewport height */
+            display: flex;
+            flex-direction: column;
+        }
+        .container {
+            flex-grow: 1;
+        }
+        .text-primary-blue { color: #0047AB; }
+        .text-accent-blue { color: #6495ED; }
+        .text-accent-green { color: #32CD32; }
+        .bg-primary-blue { background-color: #0047AB; }
+        .bg-accent-blue { background-color: #6495ED; }
+        .bg-accent-green { background-color: #32CD32; }
+        .bg-neutral-light { background-color: #F0F0F0; }
+        .shadow-custom { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+
+        .tab-button.active {
+            background-color: #0047AB; /* Primary blue for active tab */
+            color: white;
+        }
+        .tab-content {
+            display: none; /* Hidden by default */
+        }
+        .tab-content.active {
+            display: block; /* Shown when active */
+        }
+    </style>
+</head>
+<body class="text-primary-blue">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-4xl flex flex-col">
+
+        <header class="text-center mb-8">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-primary-blue mb-3">
+                <span class="text-energetic-yellow">MEET OUR TEAM!</span>
+                <br>
+                Coaches & Junior Camps at The Montgomery Tennisplex
+            </h1>
+            <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
+                Explore our expert coaching staff and exciting junior camp opportunities.
+            </p>
+        </header>
+
+        <nav class="mb-8 bg-white rounded-lg shadow-custom p-2">
+            <div class="flex flex-wrap justify-center gap-2">
+                <button class="tab-button active bg-primary-blue text-white py-2 px-4 rounded-md hover:bg-primary-blue/90 transition-colors" data-tab="coach-houston">Coach Houston</button>
+                <button class="tab-button bg-accent-blue text-white py-2 px-4 rounded-md hover:bg-accent-blue/90 transition-colors" data-tab="coach-barry">Coach Barry</button>
+                <button class="tab-button bg-accent-blue text-white py-2 px-4 rounded-md hover:bg-accent-blue/90 transition-colors" data-tab="coach-art">Coach Art</button>
+                <button class="tab-button bg-accent-blue text-white py-2 px-4 rounded-md hover:bg-accent-blue/90 transition-colors" data-tab="junior-camps">Junior Camps</button>
+            </div>
+        </nav>
+
+        <main class="flex-grow">
+            <!-- Coach Houston Section -->
+            <section id="coach-houston" class="tab-content active bg-white rounded-lg shadow-custom p-6 md:p-8 mb-8">
+                <h2 class="text-3xl font-bold text-primary-blue mb-4 text-center">Coach Houston: High-Performance & Strategy</h2>
+                <div class="p-4 bg-neutral-light rounded-lg border border-gray-200 text-center mb-6">
+                    <p class="text-gray-700 text-lg mb-2">Coach Houston specializes in elevating competitive play, focusing on advanced strategies, shot selection, and mental toughness.</p>
+                    <p class="text-gray-600 text-sm">He works with players aiming for high-level competition and strategic mastery. Coach Houston brings years of experience to help you refine your game.</p>
+                </div>
+                <p class="text-center text-gray-600 mt-6 mb-8">Perfect for players looking to refine their game and dominate the court.</p>
+                <div class="border-t border-gray-200 pt-6">
+                    <h3 class="text-2xl font-bold text-primary-blue mb-4 text-center">Express Your Interest!</h3>
+                    <form class="interest-form max-w-md mx-auto space-y-4" data-interest-id="Coach Houston Consult">
+                        <div>
+                            <label for="name-houston" class="block text-gray-700 text-sm font-bold mb-2">Your Name:</label>
+                            <input type="text" id="name-houston" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                        </div>
+                        <div>
+                            <label for="email-houston" class="block text-gray-700 text-sm font-bold mb-2">Your Email:</label>
+                            <input type="email" id="email-houston" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                        </div>
+                        <div class="pt-2">
+                            <p class="block text-gray-700 text-sm font-bold mb-2">I'm interested in:</p>
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" name="interest" value="Coach Houston Consult" class="form-checkbox h-5 w-5 text-accent-green" checked disabled>
+                                <span class="ml-2 text-gray-700">Coach Houston Consult</span>
+                            </label>
+                            <!-- Other general interests can be added here if desired -->
+                        </div>
+                        <button type="submit" class="w-full bg-accent-green hover:bg-accent-green/90 text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline transition-colors">
+                            Submit My Interest
+                        </button>
+                        <div class="form-message text-center mt-4 text-sm font-semibold"></div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Coach Barry Section -->
+            <section id="coach-barry" class="tab-content bg-white rounded-lg shadow-custom p-6 md:p-8 mb-8">
+                <h2 class="text-3xl font-bold text-primary-blue mb-4 text-center">Coach Barry: Youth Development & Our Junior Star!</h2>
+                <div class="p-4 bg-neutral-light rounded-lg border border-gray-200 text-center mb-6">
+                    <p class="text-gray-700 text-lg mb-2">Coach Barry brings energy and excitement to the court, specializing in youth pickleball development.</p>
+                    <p class="text-gray-600 text-sm">He is the dedicated coach of our 10-year-old paddle-sponsored prodigy, [10-Year-Old's Name]! Coach Barry focuses on building strong fundamentals, fostering a love for the game, and creating a positive learning environment for young players.</p>
+                </div>
+                <p class="text-center text-gray-600 mt-6 mb-8">Ideal for kids and teens eager to learn pickleball in a dynamic and engaging setting.</p>
+                <div class="border-t border-gray-200 pt-6">
+                    <h3 class="text-2xl font-bold text-primary-blue mb-4 text-center">Express Your Interest!</h3>
+                    <form class="interest-form max-w-md mx-auto space-y-4" data-interest-id="Coach Barry (Youth)">
+                        <div>
+                            <label for="name-barry" class="block text-gray-700 text-sm font-bold mb-2">Your Name:</label>
+                            <input type="text" id="name-barry" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                        </div>
+                        <div>
+                            <label for="email-barry" class="block text-gray-700 text-sm font-bold mb-2">Your Email:</label>
+                            <input type="email" id="email-barry" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                        </div>
+                        <div class="pt-2">
+                            <p class="block text-gray-700 text-sm font-bold mb-2">I'm interested in:</p>
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" name="interest" value="Coach Barry (Youth)" class="form-checkbox h-5 w-5 text-accent-green" checked disabled>
+                                <span class="ml-2 text-gray-700">Coach Barry (Youth)</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="w-full bg-accent-green hover:bg-accent-green/90 text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline transition-colors">
+                            Submit My Interest
+                        </button>
+                        <div class="form-message text-center mt-4 text-sm font-semibold"></div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Coach Art Section -->
+            <section id="coach-art" class="tab-content bg-white rounded-lg shadow-custom p-6 md:p-8 mb-8">
+                <h2 class="text-3xl font-bold text-primary-blue mb-4 text-center">Coach Art: Beginner Foundations & Accessibility</h2>
+                <div class="p-4 bg-neutral-light rounded-lg border border-gray-200 text-center mb-6">
+                    <p class="text-gray-700 text-lg mb-2">Coach Art excels at introducing new players to pickleball, making the learning process simple, fun, and confidence-building.</p>
+                    <p class="text-gray-600 text-sm">He focuses on core mechanics, basic rules, and getting you comfortable on the court quickly, no matter your athletic background.</p>
+                </div>
+                <p class="text-center text-gray-600 mt-6 mb-8">Your perfect starting point for discovering the joy of pickleball!</p>
+                <div class="border-t border-gray-200 pt-6">
+                    <h3 class="text-2xl font-bold text-primary-blue mb-4 text-center">Express Your Interest!</h3>
+                    <form class="interest-form max-w-md mx-auto space-y-4" data-interest-id="Coach Art (Beginner)">
+                        <div>
+                            <label for="name-art" class="block text-gray-700 text-sm font-bold mb-2">Your Name:</label>
+                            <input type="text" id="name-art" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                        </div>
+                        <div>
+                            <label for="email-art" class="block text-gray-700 text-sm font-bold mb-2">Your Email:</label>
+                            <input type="email" id="email-art" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                        </div>
+                        <div class="pt-2">
+                            <p class="block text-gray-700 text-sm font-bold mb-2">I'm interested in:</p>
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" name="interest" value="Coach Art (Beginner)" class="form-checkbox h-5 w-5 text-accent-green" checked disabled>
+                                <span class="ml-2 text-gray-700">Coach Art (Beginner)</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="w-full bg-accent-green hover:bg-accent-green/90 text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline transition-colors">
+                            Submit My Interest
+                        </button>
+                        <div class="form-message text-center mt-4 text-sm font-semibold"></div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Junior Camps Section -->
+            <section id="junior-camps" class="tab-content bg-white rounded-lg shadow-custom p-6 md:p-8 mb-8">
+                <h2 class="text-3xl font-bold text-primary-blue mb-4 text-center">Junior Pickleball Camps!</h2>
+                <p class="text-gray-700 text-center mb-6 max-w-2xl mx-auto">
+                    Give your child the gift of pickleball this summer! Our camps offer fun, engaging instruction for all skill levels, focusing on skill development, sportsmanship, and making new friends.
+                </p>
+                <div class="bg-accent-green/10 rounded-lg p-5 text-center border border-accent-green mb-8">
+                    <h3 class="text-2xl font-bold text-accent-green mb-3">Exclusive Early Bird Deals!</h3>
+                    <p class="text-gray-700 text-lg mb-4">Sign up for our Summer Camps at Family Night and unlock special **pre-event rates** and **limited-time savings**!</p>
+                    <p class="text-gray-600 text-sm">Don't miss this chance to secure your child's spot at the best rates!</p>
+                </div>
+                <div class="border-t border-gray-200 pt-6">
+                    <h3 class="text-2xl font-bold text-primary-blue mb-4 text-center">Express Your Interest!</h3>
+                    <form class="interest-form max-w-md mx-auto space-y-4" data-interest-id="Junior Camps">
+                        <div>
+                            <label for="name-camps" class="block text-gray-700 text-sm font-bold mb-2">Your Name:</label>
+                            <input type="text" id="name-camps" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                        </div>
+                        <div>
+                            <label for="email-camps" class="block text-gray-700 text-sm font-bold mb-2">Your Email:</label>
+                            <input type="email" id="email-camps" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                        </div>
+                        <div class="pt-2">
+                            <p class="block text-gray-700 text-sm font-bold mb-2">I'm interested in:</p>
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" name="interest" value="Junior Camps" class="form-checkbox h-5 w-5 text-accent-green" checked disabled>
+                                <span class="ml-2 text-gray-700">Junior Camps</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="w-full bg-accent-green hover:bg-accent-green/90 text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline transition-colors">
+                            Submit My Interest
+                        </button>
+                        <div class="form-message text-center mt-4 text-sm font-semibold"></div>
+                    </form>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 pt-8 text-gray-500 text-sm">
+            <p>&copy; 2025 The Montgomery Tennisplex. All rights reserved.</p>
+            <p>18010 Darnstown Rd, Gaithersburg, MD 20878</p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+            const interestForms = document.querySelectorAll('.interest-form');
+
+            // Function to show a specific tab content
+            const showTab = (tabId) => {
+                tabContents.forEach(content => {
+                    content.classList.remove('active');
+                });
+                tabButtons.forEach(button => {
+                    button.classList.remove('active');
+                    button.classList.add('bg-accent-blue'); // Reset to accent color
+                    button.classList.remove('bg-primary-blue'); // Remove active color
+                });
+
+                const activeContent = document.getElementById(tabId);
+                if (activeContent) {
+                    activeContent.classList.add('active');
+                    const activeButton = document.querySelector(`.tab-button[data-tab="${tabId}"]`);
+                    if (activeButton) {
+                        activeButton.classList.add('active');
+                        activeButton.classList.remove('bg-accent-blue'); // Remove accent color
+                        activeButton.classList.add('bg-primary-blue'); // Set active color
+                    }
+                }
+            };
+
+            // Event listeners for tab buttons
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const tabId = button.dataset.tab;
+                    showTab(tabId);
+                    window.location.hash = tabId; // Update URL hash for direct linking
+                });
+            });
+
+            // Handle form submissions
+            interestForms.forEach(form => {
+                form.addEventListener('submit', function(event) {
+                    event.preventDefault(); // Prevent default form submission
+
+                    const formMessage = this.querySelector('.form-message');
+                    const nameInput = this.querySelector('input[name="name"]');
+                    const emailInput = this.querySelector('input[name="email"]');
+                    const interestsChecked = Array.from(this.querySelectorAll('input[name="interest"]:checked')).map(cb => cb.value);
+
+                    const name = nameInput.value;
+                    const email = emailInput.value;
+
+                    if (name && email && interestsChecked.length > 0) {
+                        // In a real scenario, you would send this data to a server-side script
+                        // (e.g., Google Sheets via Apps Script, a CRM, or a database).
+                        // For this static HTML page, we'll just simulate success.
+
+                        const webAppUrl = 'https://script.google.com/macros/s/AKfycbxGVF5bxJsAH5HzshCsw3XN71_7lSNfxK39eG7QV9QqgWO-9FBPIaOv8DbOzoTdi2U0pQ/exec'; // PASTE YOUR WEB APP URL HERE
+
+const formData = new FormData();
+formData.append('name', name);
+formData.append('email', email);
+formData.append('interests', interestsChecked.join(', ')); // Send interests as a comma-separated string
+
+fetch(webAppUrl, {
+    method: 'POST',
+    body: formData
+})
+.then(response => response.json())
+.then(data => {
+    if (data.result === 'success') {
+        formMessage.textContent = 'Thank you for your interest! We will be in touch soon.';
+        formMessage.style.color = '#32CD32'; // Green color for success
+        this.reset(); // Clear the form
+    } else {
+        formMessage.textContent = 'Submission failed. Please try again or contact us directly.';
+        formMessage.style.color = '#FF6B6B'; // Red color for error
+        console.error('Form submission error:', data.message);
+    }
+})
+.catch(error => {
+    formMessage.textContent = 'An error occurred. Please try again or contact us directly.';
+    formMessage.style.color = '#FF6B6B'; // Red color for error
+    console.error('Network or fetch error:', error);
+});
+                    } else {
+                        formMessage.textContent = 'Please fill out your Name, Email, and select at least one interest.';
+                        formMessage.style.color = '#FF6B6B'; // Red color for error
+                    }
+                });
+            });
+
+            // Initial tab display based on URL hash or default to first tab
+            const initialTabFromHash = window.location.hash ? window.location.hash.substring(1) : 'coach-houston';
+            showTab(initialTabFromHash);
+        });
+    </script>
+</body>
+</html>
