@@ -56,6 +56,11 @@
             color: #721C24; /* Dark red text */
             border: 1px solid #F5C6CB;
         }
+        .form-message.submitting {
+            background-color: #FFF3CD; /* Light yellow background */
+            color: #856404; /* Dark yellow text */
+            border: 1px solid #FFECB5;
+        }
     </style>
 </head>
 <body class="text-primary-blue">
@@ -111,8 +116,6 @@
                     <li>Spin Play (Topspin/Slice Defense, Transition Skills)</li>
                     <li>Match Play & Tournament Strategy (Positioning, Mental Game)</li>
                 </ul>
-                <!-- Removed "Ongoing a la carte skills from Coach Houston are available at The Plex." -->
-
                 <div class="border-t border-gray-200 pt-6 mt-8">
                     <h3 class="text-2xl font-bold text-primary-blue mb-4 text-center">Express Your Interest!</h3>
                     <form class="interest-form max-w-md mx-auto space-y-4" data-interest-id="Coach Houston High-Level Clinic">
@@ -290,6 +293,11 @@
                     const email = emailInput.value;
 
                     if (name && email && interestsToSend.length > 0) {
+                        // Show submitting message immediately
+                        formMessage.textContent = 'Submitting...';
+                        formMessage.classList.remove('success', 'error');
+                        formMessage.classList.add('submitting');
+
                         const webAppUrl = 'https://script.google.com/macros/s/AKfycbxGVF5bxJsAH5HzshCsw3XN71_7lSNfxK39eG7QV9QqgWO-9FBPIaOv8DbOzoTdi2U0pQ/exec'; // Your Web App URL
 
                         const formData = new FormData();
@@ -305,30 +313,26 @@
                         .then(data => {
                             if (data.result === 'success') {
                                 formMessage.textContent = 'Thank you for your interest! We will be in touch soon.';
-                                formMessage.style.color = '#32CD32'; // Green color for success
-                                formMessage.classList.remove('error'); // Ensure error class is removed
-                                formMessage.classList.add('success'); // Add success class for styling
+                                formMessage.classList.remove('submitting', 'error');
+                                formMessage.classList.add('success');
                                 this.reset(); // Clear the form
                             } else {
                                 formMessage.textContent = 'Submission failed. Please try again or contact us directly.';
-                                formMessage.style.color = '#FF6B6B'; // Red color for error
-                                formMessage.classList.remove('success'); // Ensure success class is removed
-                                formMessage.classList.add('error'); // Add error class for styling
+                                formMessage.classList.remove('submitting', 'success');
+                                formMessage.classList.add('error');
                                 console.error('Form submission error:', data.message);
                             }
                         })
                         .catch(error => {
                             formMessage.textContent = 'An error occurred. Please try again or contact us directly.';
-                            formMessage.style.color = '#FF6B6B'; // Red color for error
-                            formMessage.classList.remove('success'); // Ensure success class is removed
-                            formMessage.classList.add('error'); // Add error class for styling
+                            formMessage.classList.remove('submitting', 'success');
+                            formMessage.classList.add('error');
                             console.error('Network or fetch error:', error);
                         });
                     } else {
                         formMessage.textContent = 'Please fill out your Name, Email, and select at least one interest.';
-                        formMessage.style.color = '#FF6B6B'; // Red color for error
-                        formMessage.classList.remove('success'); // Ensure success class is removed
-                        formMessage.classList.add('error'); // Add error class for styling
+                        formMessage.classList.remove('submitting', 'success');
+                        formMessage.classList.add('error');
                     }
                     // Removed setTimeout to keep message visible until user interacts or navigates
                 });
