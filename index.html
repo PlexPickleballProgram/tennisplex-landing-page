@@ -38,6 +38,24 @@
         .tab-content.active {
             display: block; /* Shown when active */
         }
+        /* New styling for form messages */
+        .form-message {
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            font-size: 1rem; /* Slightly larger text */
+            font-weight: 600; /* Bolder */
+        }
+        .form-message.success {
+            background-color: #D4EDDA; /* Light green background */
+            color: #155724; /* Dark green text */
+            border: 1px solid #C3E6CB;
+        }
+        .form-message.error {
+            background-color: #F8D7DA; /* Light red background */
+            color: #721C24; /* Dark red text */
+            border: 1px solid #F5C6CB;
+        }
     </style>
 </head>
 <body class="text-primary-blue">
@@ -288,26 +306,31 @@
                             if (data.result === 'success') {
                                 formMessage.textContent = 'Thank you for your interest! We will be in touch soon.';
                                 formMessage.style.color = '#32CD32'; // Green color for success
+                                formMessage.classList.remove('error'); // Ensure error class is removed
+                                formMessage.classList.add('success'); // Add success class for styling
                                 this.reset(); // Clear the form
                             } else {
                                 formMessage.textContent = 'Submission failed. Please try again or contact us directly.';
                                 formMessage.style.color = '#FF6B6B'; // Red color for error
+                                formMessage.classList.remove('success'); // Ensure success class is removed
+                                formMessage.classList.add('error'); // Add error class for styling
                                 console.error('Form submission error:', data.message);
                             }
                         })
                         .catch(error => {
                             formMessage.textContent = 'An error occurred. Please try again or contact us directly.';
                             formMessage.style.color = '#FF6B6B'; // Red color for error
+                            formMessage.classList.remove('success'); // Ensure success class is removed
+                            formMessage.classList.add('error'); // Add error class for styling
                             console.error('Network or fetch error:', error);
                         });
                     } else {
                         formMessage.textContent = 'Please fill out your Name, Email, and select at least one interest.';
                         formMessage.style.color = '#FF6B6B'; // Red color for error
+                        formMessage.classList.remove('success'); // Ensure success class is removed
+                        formMessage.classList.add('error'); // Add error class for styling
                     }
-                    // Ensure the form message is shown for a brief period before potentially clearing
-                    setTimeout(() => {
-                        formMessage.textContent = ''; // Clear message after 3 seconds
-                    }, 3000); 
+                    // Removed setTimeout to keep message visible until user interacts or navigates
                 });
             });
 
