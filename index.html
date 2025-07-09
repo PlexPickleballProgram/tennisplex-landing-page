@@ -46,10 +46,12 @@
 
         <header class="text-center mb-8 bg-white p-6 rounded-lg shadow-custom">
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-primary-blue mb-2">
-                MEET OUR COACHES & CAMPS
+                <span class="text-energetic-yellow">DISCOVER YOUR POTENTIAL!</span>
+                <br>
+                Coaches & Junior Camps
             </h1>
             <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
-                Your Path to Pickleball Excellence Starts Here!
+                At The Montgomery Tennisplex
             </p>
         </header>
 
@@ -91,7 +93,7 @@
                     <li>Spin Play (Topspin/Slice Defense, Transition Skills)</li>
                     <li>Match Play & Tournament Strategy (Positioning, Mental Game)</li>
                 </ul>
-                <p class="text-center text-gray-600 mt-6 mb-8">Ongoing a la carte skills from Coach Houston are available at The Plex.</p>
+                <!-- Removed "Ongoing a la carte skills from Coach Houston are available at The Plex." -->
 
                 <div class="border-t border-gray-200 pt-6 mt-8">
                     <h3 class="text-2xl font-bold text-primary-blue mb-4 text-center">Express Your Interest!</h3>
@@ -203,7 +205,7 @@
 
         <footer class="text-center mt-12 pt-8 text-gray-500 text-sm">
             <p>&copy; 2025 The Montgomery Tennisplex. All rights reserved.</p>
-            <p>11710 Darnstown Rd, Gaithersburg, MD 20878</p>
+            <p>18010 Central Park Circle Boyds, MD 20841</p>
         </footer>
 
     </div>
@@ -302,6 +304,10 @@
                         formMessage.textContent = 'Please fill out your Name, Email, and select at least one interest.';
                         formMessage.style.color = '#FF6B6B'; // Red color for error
                     }
+                    // Ensure the form message is shown for a brief period before potentially clearing
+                    setTimeout(() => {
+                        formMessage.textContent = ''; // Clear message after 3 seconds
+                    }, 3000); 
                 });
             });
 
